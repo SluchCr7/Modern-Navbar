@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="NavBar">
+        <ul class="Links_NavBar">
+            <li class="active"><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Gallary">gallery</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        let Links = document.querySelectorAll(".Links_NavBar li")
+        Links.forEach((li) =>{
+            li.addEventListener("click" , (e)=>{
+                Links.forEach((li) =>{
+                    li.classList.remove("active")
+                })
+                    li.classList.add("active")
+            })
+        })
+    </script>
+</body>
+</html>
